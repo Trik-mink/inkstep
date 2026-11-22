@@ -1,0 +1,21 @@
+name: Validate Inkstep
+on:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.23.3'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chrome webkit
+      - run: npm run validate
+      - run: npm run lint
+      - run: npm run lab:e2e
+      - run: npm run build

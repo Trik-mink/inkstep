@@ -1,0 +1,19 @@
+commands:
+  prepare: npm ci
+  test: npm run validate && npm run lab:e2e && npm run build
+  lint: npm run lint
+pr:
+  base_branch: main
+commit:
+  fix_message: 'fix({{.Step}}): {{.Summary}}'
+  trailers: []
+test:
+  instructions: |
+    Use Node 22.23.3 or another version supported by package.json.
+    The configured test command covers unit logic, exported notebook behavior in Chrome and WebKit, and the production Worker/client build.
+    Install the matching Playwright WebKit browser when required; the lab Chrome project uses the installed Chrome channel.
+    Use the release-tests Playwright suite for real DeepSpace authentication, ownership, save/reload, and failure-recovery verification when a local SDK runtime is available.
+    Start an isolated SDK runtime from this worktree to test any pipeline fixes; do not treat an unrelated server running the caller checkout as evidence for changed code.
+    Never print credentials, tokens, cookies, or .dev.vars contents, and never commit those files.
+    Live billed vision tests are opt-in and were verified once before this gate; do not repeat them automatically.
+    Physical iPad acceptance and representative children's handwriting accuracy remain explicit limitations, not claimed passes.
