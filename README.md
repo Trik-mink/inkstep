@@ -30,7 +30,8 @@ CLI authentication authorizes development; sign in on the app page to identify t
 Use Chrome for plain-HTTP local authentication: Safari rejects the secure session cookie on the local HTTP setup.
 The intended deployed origin uses HTTPS; the deployed Safari flow still requires verification.
 
-The public landing is `/`, the tutor is `/learn`, the drawing-only prototype is `/handwriting-lab`, and the learning exercise is `/practice-lab`.
+The public landing is `/` and the authenticated tutor is `/learn`.
+The drawing-only prototype is retained as an offline export through `npm run lab:export`; prototype web routes and the practice-session collection are no longer part of the release.
 The full app requires the SDK runtime; the static HTML export contains only the drawing prototype.
 
 ## Architecture and ownership
@@ -113,3 +114,15 @@ The signed-out app gate uses the same illustration while preserving the existing
 Returning families choose illustrated notebook covers showing saved progress; selection still opens the first unfinished problem.
 New notebook creation and detailed parent progress are secondary controls.
 The entry flow was checked at 320, 768, 1024, and 1440 pixels, including keyboard focus when opening and closing the creation form.
+
+## Progress and presentation preferences
+
+Notebook completion uses a separate, owner-scoped subscription filtered to solved attempts, without a row limit.
+The SDK supports an omitted limit, so completion and resume do not depend on the recent-history window or the age of the solved record.
+This keeps the bounded eight-problem product on platform query primitives without adding a second progress store or a migration.
+For a larger curriculum or much larger family histories, a server-maintained completion projection would reduce the amount of solved history transferred.
+The most recent 100 family attempts are used only for the parent history list.
+Companion and stationery preferences are stored on the device under a key containing both the authenticated parent ID and learner ID.
+The notebook cover reads the same companion preference as the board.
+Preferences are shared across that learner’s problems, but are not synced across devices or live across open tabs.
+Former device-wide choices reset once to the per-learner defaults; no writing or progress is deleted.

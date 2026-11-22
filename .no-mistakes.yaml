@@ -1,5 +1,5 @@
 commands:
-  prepare: npm ci
+  prepare: node scripts/supported-node.mjs npm ci
   test: npm run validate && npm run lab:e2e && npm run build
   lint: npm run lint
 pr:

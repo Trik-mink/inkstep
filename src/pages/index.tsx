@@ -22,7 +22,6 @@ export default function Landing() {
       <p>Sign in once, then create a nickname for each learner. Children don’t need email accounts.</p>
       <p>Eight little math adventures explore missing numbers. AI reads a written step when requested; the learner checks its symbols before the math is evaluated.</p>
       <Link to="/learn">Parent sign-in →</Link>
-      <Link className="parent-info-demo" to="/handwriting-lab">Try the drawing-only preview</Link>
     </aside>
   </main></>
 }
