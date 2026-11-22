@@ -28,13 +28,17 @@ The user explicitly authorized the release commit on November 21, 2026, overridi
 Release branch: `feat/inkstep-tutor`.
 Commit subject: `Ship Inkstep handwriting tutor on DeepSpace`.
 
-The no-mistakes home command reported that the repository is not initialized.
-Running `no-mistakes init` refused because this repository has no `origin` remote; the CLI states that it needs a push target and pull-request workflow.
-No pipeline run has started, and no pipeline pass is claimed.
-DeepSpace source remains unclaimed, as confirmed by the read-only `app source --json` command.
-No GitHub remote was added, and no code was pushed or deployed.
-The project instructions prohibit setting up another Git host without explicit developer approval.
-The release remains gated pending the user's choice of repository setup or acceptance of the unavailable gate.
+The private GitHub repository is https://github.com/Trik-mink/inkstep.
+The validation-only main branch is pushed; the application is on feat/inkstep-tutor.
+GitHub email privacy protection rejected the first push, so unpublished commit emails were replaced with the verified GitHub noreply address.
+Original commit history remains preserved locally under refs/inkstep/pre-email-privacy/.
+
+No-mistakes was initialized and started against the entire application diff.
+The user explicitly requested cancellation after the reviewer recorded only startup for more than fifteen minutes.
+The cancelled run returned branch custody without changing the submitted app commit.
+Claude authentication was expired; Codex reported connector authentication errors, and isolated startup probes rejected both the configured gpt-6.1-sol model and the native CLI default gpt-5.5 model for the connected ChatGPT account.
+No review verdict, pipeline tests, PR, CI pass, or gate pass is claimed.
+Deployment remains pending the user’s decision on this unavailable gate.
 
 ## Entry redesign follow-up
 
