@@ -63,7 +63,17 @@ There are eight curated problems and no voice, uploads, profile deletion, or cro
 The second-account live isolation check was explicitly skipped; ownership and action checks have automated coverage.
 Safari sign-in over the local HTTP runtime fails because it does not retain the secure session cookie; use Chrome locally and verify Safari on the deployed HTTPS origin.
 The failed-save retry bug was reproduced with a rejected grade response and fixed by restoring the existing transcription without another AI read.
-The release is committed locally and the private GitHub repository is configured.
+The release is committed locally and the GitHub repository is configured.
 The first no-mistakes run was cancelled at the user’s request after the reviewer remained at startup for over fifteen minutes.
 Claude authentication was expired; isolated Codex startup probes rejected both the configured model and the CLI default model for the connected ChatGPT account.
 No no-mistakes pass is claimed, and deployment is pending.
+
+## Deferred review findings for the initial submission
+
+The user chose to deploy the working core before finishing the gate fixes.
+Solved progress currently depends on the latest 100 family-wide attempts, so older solved rows can fall out of that window and undercount completion or restart an already-solved problem.
+Companion and stationery preferences are device-wide rather than learner-specific, and shelf artwork is assigned by position.
+The public drawing lab and authenticated practice exercise remain available in this first release; their removal from production was approved but deferred.
+The offline drawing export is intentionally retained for development.
+These issues were identified by no-mistakes review, but its fix round was cancelled for the user-authorized deploy-first release.
+The cancelled round made no commits to the released branch.

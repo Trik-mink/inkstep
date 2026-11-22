@@ -28,7 +28,7 @@ The user explicitly authorized the release commit on November 21, 2026, overridi
 Release branch: `feat/inkstep-tutor`.
 Commit subject: `Ship Inkstep handwriting tutor on DeepSpace`.
 
-The private GitHub repository is https://github.com/Trik-mink/inkstep.
+The GitHub repository is https://github.com/Trik-mink/inkstep.
 The validation-only main branch is pushed; the application is on feat/inkstep-tutor.
 GitHub email privacy protection rejected the first push, so unpublished commit emails were replaced with the verified GitHub noreply address.
 Original commit history remains preserved locally under refs/inkstep/pre-email-privacy/.
@@ -37,8 +37,14 @@ No-mistakes was initialized and started against the entire application diff.
 The user explicitly requested cancellation after the reviewer recorded only startup for more than fifteen minutes.
 The cancelled run returned branch custody without changing the submitted app commit.
 Claude authentication was expired; Codex reported connector authentication errors, and isolated startup probes rejected both the configured gpt-6.1-sol model and the native CLI default gpt-5.5 model for the connected ChatGPT account.
-No review verdict, pipeline tests, PR, CI pass, or gate pass is claimed.
-Deployment remains pending the user’s decision on this unavailable gate.
+Claude subscription login was then restored and the restarted review completed with four findings.
+The user approved durable progress, learner-specific companions, and removal of both public prototype surfaces, then requested deployment before completing those fixes.
+The second run and its fix round were cancelled at that explicit change of priority.
+Branch custody returned cleanly with no pipeline fix commits.
+No pipeline test pass, PR, CI pass, or full gate pass is claimed.
+The user authorized publishing the repository and deploying the existing verified core with these limitations disclosed.
+See KNOWN-ISSUES.md for the deferred findings.
+Deployment is in preparation.
 
 ## Entry redesign follow-up
 

@@ -1,7 +1,7 @@
 # Inkstep submission draft
 
 Live URL: pending deployment; use the exact URL printed by the successful DeepSpace release.
-Repository: https://github.com/Trik-mink/inkstep (private; reviewer access required).
+Repository: https://github.com/Trik-mink/inkstep.
 
 ## Short note
 
@@ -23,7 +23,9 @@ The physical iPad testing exposed input and toolbar problems; final physical-dev
 Agent verification covered a real-backend tutoring flow, real vision transcription of a synthetic equation before confirmation, persistence, duplicate-answer handling, typing fallback, failure recovery, permissions, and the production build.
 The second-account browser isolation exercise was skipped; the ownership policies and action checks were exercised in automated tests instead.
 
-My next steps would be physical iPad acceptance, recognition evaluation on the intended learners' handwriting, and parent-controlled retention/deletion before broader use.
+The automated review found a progress-history window that can undercount older completions, device-wide companion choices, and prototype pages that still ship.
+I chose to submit the verified core first and finish these fixes next; the no-mistakes gate was cancelled and did not pass.
+Final iPad acceptance, handwriting accuracy evaluation, and parent-controlled retention/deletion also remain future work.
 
 ## Before submitting
 
