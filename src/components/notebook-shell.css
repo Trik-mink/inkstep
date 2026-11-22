@@ -1,0 +1,33 @@
+.notebook-app { background: #f3f4e9; color: #2d493c; }
+.notebook-navigation { color: #36513e; background: #f8f9f0; border-bottom-color: #d6dfcb; font-family: 'Avenir Next',Avenir,system-ui,sans-serif; }
+.notebook-nav-brand { color: #2d493c; font: 700 23px/1 Georgia,serif; letter-spacing: -.8px; text-decoration: none; flex-shrink: 0; }
+.notebook-nav-brand span { color: #a48140; }
+.notebook-nav-link { display: inline-flex; align-items: center; gap: 6px; padding: 0 12px; min-height: 44px; font-size: 12px; color: #5b6c5e; text-decoration: none; }
+.notebook-nav-link.is-active { color: #2f5039; text-decoration: underline; text-decoration-color: #aa8a4b; text-underline-offset: 7px; text-decoration-thickness: 2px; }
+.notebook-nav-link:hover { color: #2d493c; }
+.notebook-nav-account { min-height: 36px; border-color: #d6dfcb; background: #edf2e4; color: #36513e; font-size: 12px; }
+.notebook-navigation .notebook-nav-account:hover { background: #e4ecd9; }
+.notebook-nav-signin { min-height: 36px; background: #3e604b; color: #fffef6; border: 1px solid #35513f; font-size: 12px; border-radius: 7px; }
+.notebook-nav-toggle { min-height: 44px; min-width: 44px; color: #526948; border-radius: 7px; }
+.notebook-mobile-links { background: #f8f9f0; border-color: #d6dfcb; }
+.notebook-mobile-links .notebook-nav-link { width: 100%; }
+.notebook-account-menu { color: #36513e; background: #fffdf5; border-color: #cbd5be; font-family: 'Avenir Next',Avenir,system-ui,sans-serif; }
+.notebook-account-menu [data-testid=nav-user-email] { color: #5b6c5e; }
+.notebook-navigation :where(a,button):focus-visible, .notebook-settings :where(a,button):focus-visible { outline: 3px solid #a48140; outline-offset: 3px; }
+.notebook-settings { min-height: 100%; padding: 36px 28px 48px; background: #f3f4e9; color: #2d493c; font-family: 'Avenir Next',Avenir,system-ui,sans-serif; }
+.notebook-settings-inner { max-width: 920px; margin: auto; }
+.notebook-settings-back { display: inline-flex; align-items: center; gap: 7px; min-height: 44px; color: #5b6c5e; font-size: 12px; text-decoration: none; }
+.notebook-settings-header { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin: 8px 0 28px; }
+.notebook-settings-header h1 { font: 40px/1.15 Georgia,serif; letter-spacing: -.7px; margin: 8px 0 12px; }
+.notebook-settings-header p { font-size: 14px; color: #5b6c5e; line-height: 1.6; margin: 0; }
+.notebook-settings-header .settings-companion { width: 92px; height: 108px; flex-shrink: 0; }
+.settings-companion .companion-portrait { width: 100%; height: 100%; object-fit: contain; }
+.notebook-settings-paper { max-width: 650px; background: #fffdf5; padding: 28px 32px; border: 1px solid #d4dcc7; border-left: 5px solid #94a58c; border-radius: 5px 12px 12px 5px; box-shadow: 0 3px 0 #dfdfcb; }
+.notebook-settings-paper h2 { font: 25px Georgia,serif; margin: 0 0 22px; }
+.notebook-settings-paper dl { margin: 0; display: grid; gap: 20px; }
+.notebook-settings-paper dt { color: #5b6c5e; font-size: 11px; margin-bottom: 5px; }
+.notebook-settings-paper dd { color: #2d493c; font-size: 15px; overflow-wrap: anywhere; margin: 0; }
+.notebook-settings-signout { display: inline-flex; align-items: center; gap: 8px; margin-top: 28px; min-height: 44px; padding: 10px 16px; border: 1px solid #b7c7a7; border-radius: 7px; background: #edf2e4; color: #36513e; font: 500 13px 'Avenir Next',system-ui,sans-serif; cursor: pointer; }
+.notebook-settings-signout:hover { background: #e1e9d6; }
+.notebook-settings-note { color: #5b6c5e; font-size: 12px; line-height: 1.7; margin-top: 24px; max-width: 590px; }
+@media(max-width:600px) { .notebook-settings { padding: 20px 20px 32px; } .notebook-settings-header { gap: 14px; } .notebook-settings-header h1 { font-size: 32px; } .notebook-settings-header .settings-companion { width: 68px; height: 86px; } .notebook-settings-paper { padding: 22px; } .notebook-nav-account { min-height: 40px; } .notebook-nav-signin { min-height: 40px; } }
