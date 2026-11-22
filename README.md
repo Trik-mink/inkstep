@@ -124,4 +124,5 @@ For a larger curriculum or much larger family histories, a server-maintained com
 The most recent 100 family attempts are used only for the parent history list.
 Companion and stationery preferences are stored on the device under a key containing both the authenticated parent ID and learner ID.
 The notebook cover reads the same companion preference as the board.
-Preferences are shared across that learner’s problems, but are not synced across devices.
+Preferences are shared across that learner’s problems, but are not synced across devices or live across open tabs.
+Former device-wide choices reset once to the per-learner defaults; no writing or progress is deleted.

@@ -72,6 +72,7 @@ The progress-history bug was reproduced against the original deployed app by sav
 The follow-up queries solved attempts separately without a row limit, so shelf counts and resume no longer depend on recent history.
 Per-learner companion and stationery preferences now include the authenticated parent and learner in their device-local key.
 Notebook covers read the same companion preference.
+Former device-wide companion and stationery choices are not carried over, so each learner starts once from the default Fox and Sage choices; no writing or progress is deleted.
 The public drawing lab and authenticated practice-exercise page and collection registration are removed from the follow-up source.
 The offline drawing export is retained.
 The broader suite also exposed and verified removal of the hidden 20-learner query limit and an excessive-subscription render failure in the first fix implementation.

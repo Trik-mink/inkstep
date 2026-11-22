@@ -9,19 +9,11 @@ export function learnerPreferenceScope(parentId: string, profileId: string) {
 export function useNotebookPreferences(scope = 'inkstep:lab') {
   const [preferences, setPreferences] = useState<Preferences>(defaults)
   useEffect(() => {
-    function load() {
-      try {
-        const world: World = localStorage.getItem(`${scope}:world:v1`) === 'desk' ? 'desk' : 'woodland'
-        const saved = localStorage.getItem(`${scope}:companion:v1`)
-        setPreferences({ world, companion: saved === 'owl' || saved === 'fox' ? saved : world === 'desk' ? 'owl' : 'fox' })
-      } catch { setPreferences(defaults) }
-    }
-    function changed(event: StorageEvent) {
-      if (event.key === null || event.key?.startsWith(`${scope}:`)) load()
-    }
-    load()
-    window.addEventListener('storage', changed)
-    return () => window.removeEventListener('storage', changed)
+    try {
+      const world: World = localStorage.getItem(`${scope}:world:v1`) === 'desk' ? 'desk' : 'woodland'
+      const saved = localStorage.getItem(`${scope}:companion:v1`)
+      setPreferences({ world, companion: saved === 'owl' || saved === 'fox' ? saved : world === 'desk' ? 'owl' : 'fox' })
+    } catch { setPreferences(defaults) }
   }, [scope])
   function selectWorld(world: World) {
     setPreferences(previous => ({ ...previous, world }))
