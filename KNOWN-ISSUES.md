@@ -66,7 +66,8 @@ The failed-save retry bug was reproduced with a rejected grade response and fixe
 The release is committed locally and the GitHub repository is configured.
 The first no-mistakes run was cancelled at the user’s request after the reviewer remained at startup for over fifteen minutes.
 Claude authentication was expired; isolated Codex startup probes rejected both the configured model and the CLI default model for the connected ChatGPT account.
-No no-mistakes pass is claimed, and deployment is pending.
+No no-mistakes pass is claimed.
+The verified core is deployed at https://inkstep.app.space with the review findings below deferred.
 
 ## Deferred review findings for the initial submission
 

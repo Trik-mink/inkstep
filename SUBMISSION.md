@@ -1,6 +1,6 @@
 # Inkstep submission draft
 
-Live URL: pending deployment; use the exact URL printed by the successful DeepSpace release.
+Live URL: https://inkstep.app.space
 Repository: https://github.com/Trik-mink/inkstep.
 
 ## Short note

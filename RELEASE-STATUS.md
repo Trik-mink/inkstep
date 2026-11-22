@@ -1,6 +1,6 @@
 # Release status
 
-Implementation complete for the bounded first release; deployment pending.
+The verified core is deployed at https://inkstep.app.space; review fixes remain deferred.
 
 ## Verified
 
@@ -44,7 +44,10 @@ Branch custody returned cleanly with no pipeline fix commits.
 No pipeline test pass, PR, CI pass, or full gate pass is claimed.
 The user authorized publishing the repository and deploying the existing verified core with these limitations disclosed.
 See KNOWN-ISSUES.md for the deferred findings.
-Deployment is in preparation.
+Deployed release: rel_01M80SVD1TC73WMDEPKNSFEBRC.
+DeepSpace confirmed edge serving and the data plane.
+The public repository is https://github.com/Trik-mink/inkstep.
+Six deployed Chrome checks passed: responsive welcome, sign-in entry, anonymous action rejection, and direct paid-proxy rejection.
 
 ## Entry redesign follow-up
 
@@ -52,7 +55,7 @@ The welcome, signed-out gate, and learner library now share an illustrated noteb
 Ten entry/tutor browser checks pass; the already-verified billed vision check was intentionally skipped in that repeat run.
 The 35 unit tests, type check, lint, and production build pass after the redesign.
 No authentication mechanics, ownership policies, grading rules, or recognition calls were changed for this visual task.
-Deployment remains pending.
+The core is now deployed; the limitations below remain.
 The public welcome and parent controls also pass WebKit checks at 768×1024 and 1024×768 with no overflow or page errors.
 
 ## Navigation and settings consistency
