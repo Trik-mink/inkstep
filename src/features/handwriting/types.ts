@@ -38,6 +38,7 @@ export type Draft = { version: 1; revision: number; strokes: Stroke[] }
 export type TutorNotebookConfig = {
   problem: string
   storageKey: string
+  preferenceScope: string
   header: import('react').ReactNode
   overlay: import('react').ReactNode
   recognize: (submission: Submission, signal: AbortSignal) => Promise<RecognitionResult>

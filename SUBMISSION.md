@@ -23,13 +23,13 @@ The physical iPad testing exposed input and toolbar problems; final physical-dev
 Agent verification covered a real-backend tutoring flow, real vision transcription of a synthetic equation before confirmation, persistence, duplicate-answer handling, typing fallback, failure recovery, permissions, and the production build.
 The second-account browser isolation exercise was skipped; the ownership policies and action checks were exercised in automated tests instead.
 
-The automated review found a progress-history window that can undercount older completions, device-wide companion choices, and prototype pages that still ship.
-I chose to submit the verified core first and finish these fixes next; the no-mistakes gate was cancelled and did not pass.
+Automated review identified a progress-history window, device-wide companion preferences, and prototype pages that shipped with the early release.
+A follow-up fixes those issues, preserves the offline development lab, and adds browser regressions; final pipeline and deployment status should be checked in the release pull request.
 Final iPad acceptance, handwriting accuracy evaluation, and parent-controlled retention/deletion also remain future work.
 
 ## Before submitting
 
-- Replace the pending live and repository entries with actual release links.
+- Confirm the latest release and pull-request outcome before describing follow-up fixes as deployed.
 - Verify the important path on the deployed HTTPS origin, including Safari sign-in.
 - Complete the physical iPad check or keep the limitation explicit.
 - Review the personal-verification paragraph so it describes only checks actually performed by the applicant.

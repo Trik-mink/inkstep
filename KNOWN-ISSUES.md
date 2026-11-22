@@ -63,18 +63,17 @@ There are eight curated problems and no voice, uploads, profile deletion, or cro
 The second-account live isolation check was explicitly skipped; ownership and action checks have automated coverage.
 Safari sign-in over the local HTTP runtime fails because it does not retain the secure session cookie; use Chrome locally and verify Safari on the deployed HTTPS origin.
 The failed-save retry bug was reproduced with a rejected grade response and fixed by restoring the existing transcription without another AI read.
-The release is committed locally and the GitHub repository is configured.
-The first no-mistakes run was cancelled at the user’s request after the reviewer remained at startup for over fifteen minutes.
-Claude authentication was expired; isolated Codex startup probes rejected both the configured model and the CLI default model for the connected ChatGPT account.
-No no-mistakes pass is claimed.
-The verified core is deployed at https://inkstep.app.space with the review findings below deferred.
+The original core is deployed at https://inkstep.app.space.
+The user requested completion of the review follow-up after the early submission.
 
-## Deferred review findings for the initial submission
+## Review follow-up awaiting gated release
 
-The user chose to deploy the working core before finishing the gate fixes.
-Solved progress currently depends on the latest 100 family-wide attempts, so older solved rows can fall out of that window and undercount completion or restart an already-solved problem.
-Companion and stationery preferences are device-wide rather than learner-specific, and shelf artwork is assigned by position.
-The public drawing lab and authenticated practice exercise remain available in this first release; their removal from production was approved but deferred.
-The offline drawing export is intentionally retained for development.
-These issues were identified by no-mistakes review, but its fix round was cancelled for the user-authorized deploy-first release.
-The cancelled round made no commits to the released branch.
+The progress-history bug was reproduced against the original deployed app by saving a completion and then 105 later attempts.
+The follow-up queries solved attempts separately without a row limit, so shelf counts and resume no longer depend on recent history.
+Per-learner companion and stationery preferences now include the authenticated parent and learner in their device-local key.
+Notebook covers read the same companion preference.
+The public drawing lab and authenticated practice-exercise page and collection registration are removed from the follow-up source.
+The offline drawing export is retained.
+The broader suite also exposed and verified removal of the hidden 20-learner query limit and an excessive-subscription render failure in the first fix implementation.
+All 15 non-billed release browser checks pass on the corrected local runtime.
+These source changes are pending the complete no-mistakes gate and deployment; they must not be described as already live.

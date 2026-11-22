@@ -4,7 +4,8 @@ import { imageOf } from './ink'
 import { createId } from './id'
 import { recognize } from './recognition'
 import { ReviewPanel } from './ReviewPanel'
-import { CompanionPortrait, type Companion, type World } from './StorybookArt'
+import { CompanionPortrait } from './StorybookArt'
+import { useNotebookPreferences } from './useNotebookPreferences'
 import { BoardMenu } from './BoardMenu'
 import { useNotebookLayout } from './useNotebookLayout'
 import type { Rect } from './notebookLayout'
@@ -29,31 +30,14 @@ export function HandwritingLab({ tutor }: { tutor?: TutorNotebookConfig } = {}) 
   const [error, setError] = useState('')
   const [undoStack, setUndoStack] = useState<Stroke[][]>([])
   const [redoStack, setRedoStack] = useState<Stroke[][]>([])
-  const [companion, setCompanion] = useState<Companion>('fox')
+  const { companion, world, selectWorld, selectCompanion } = useNotebookPreferences(tutor?.preferenceScope)
   const [previewBounds, setPreviewBounds] = useState<Rect | null>(null)
   const [reviewElement, setReviewElement] = useState<HTMLElement | null>(null)
-  const [world, setWorld] = useState<World>('woodland')
   const [reviewOpen, setReviewOpen] = useState(false)
   const problemRef = useRef<HTMLDivElement>(null)
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const menuRef = useRef<HTMLDivElement>(null)
   const checkRef = useRef<HTMLButtonElement>(null)
-  useEffect(() => {
-    try {
-      const oldWorld = localStorage.getItem('inkstep:lab:world:v1')
-      if (oldWorld === 'desk') setWorld('desk')
-      const savedCompanion = localStorage.getItem('inkstep:lab:companion:v1')
-      setCompanion(savedCompanion === 'fox' || savedCompanion === 'owl' ? savedCompanion : oldWorld === 'desk' ? 'owl' : 'fox')
-    } catch { /* Theme preference is optional when device storage is unavailable. */ }
-  }, [])
-  function selectWorld(next: World) {
-    setWorld(next)
-    try { localStorage.setItem('inkstep:lab:world:v1', next) } catch { /* The world still changes for this session. */ }
-  }
-  function selectCompanion(next: Companion) {
-    setCompanion(next)
-    try { localStorage.setItem('inkstep:lab:companion:v1', next) } catch { /* Optional presentation preference. */ }
-  }
   const layout = useNotebookLayout(canvasRef, problemRef, draft.strokes, previewBounds, review, reviewElement, ready, drawing)
   function dismissReview() {
     setReviewOpen(false)
